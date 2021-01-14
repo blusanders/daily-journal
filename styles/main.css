@@ -1,3 +1,71 @@
+@import "header.css";
+@import "footer.css";
+
+* {
+  /* border: lightgreen 1px solid;
+  font-family: Geneva, Tahoma, sans-serif; */
+}
+
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font: normal 18px/1.5 "Fira Sans", "Helvetica Neue", sans-serif;
+  /* padding: 50px 0;} */
+}
+
+/* entire page */
+main {
+  background-color: #f0f0f0;
+}
+
+hr.fancyHR {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+/* container for all content  */
+.contentContainer {
+}
+
+.containerTop {
+  /* padding: 25px; */
+  /* margin: 10px; */
+}
+
+.journalForm {
+  display: flex;
+  flex-direction: column;
+}
+
+/* removed field set bc didn't like the box */
+/* fieldset {
+} */
+
+.containerBottom {
+  /* padding: 25px;
+  margin: 10px; */
+}
+
+.journalFields__title {
+  max-width: 400px;
+}
+
+#journalMood {
+  width: 150px;
+}
+
+.journalFields__entry {
+  max-width: 400px;
+}
+
+.journalFields__button {
+  width: 200px;
+  text-align: center;
+  background: gray;
+  color: white;
+  border: 0;
 }

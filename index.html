@@ -3,9 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Imbue">
+    <title>Daily Journal</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
+
 <body>
+
+    <main>
+
+        <header>
+            <h2><div class=headerTitle>DAILY JOURNAL</div></h2>
+        </header>
+
+        <section class="contentContainer">
+
+        <div class=containerTop>
+
+                <form class=journalForm action="">
+
+                    <!-- <fieldset class=journalFieldset> -->
+                    
+                    <label for="journalTitle">Title</label>
+                    <input type="text" class=journalFields__title id=journalTitle>
+
+                    <label for="journalMood">Mood</label>
+                    <select name="journalMood" id="journalMood">
+                        <option value="1">Meh</option>
+                        <option value="2">Empty</option>
+                        <option value="3">Terrified</option>
+                        <option value="4">Dread</option>
+                      </select>
+
+                    <label for="journalDate">Date of Entry</label>
+                    <input type="date" class="journalFields__date" name="journalDate" id="journalDate">
+
+                    <label for="journalEntry">Journal Entry</label>
+                    <textarea rows="4" cols="50" class="journalFields__entry" name="journalEntry" id="journalEntry">
+                    </textarea>
+
+                    <input type="button" class="journalFields__button" value="Record Journal Entry">
+
+                <!-- </fieldset> -->
+
+            </form>
+
+        </div>
+
+        <!-- <div class=containerMiddle></div> -->
+        <br>
+        <hr class=fancyHR>
+        <br>
+
+        <div class=containerBottom>
+            LIST OF JOURNAL ENTRIES
+            <br>
+            Entry 1<br>
+            Entry 2<br>
+            Entry 3
+        </div>
+
+    </section>
+
+    <footer>
+            <div class=footerName>Blu Sanders</div>
+            <div class=footerGit><a href="https://github.com/blusanders">MY GITHUB</a></div>
+            <div class=footerCopyright>(c) 2021</div>
+        </footer>
+
+ 
+    </main>
     
+    <script type="module" src="./scripts/main.js>
 </body>
 </html>
