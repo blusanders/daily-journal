@@ -1,6 +1,6 @@
 footer {
   display: flex;
-  border: 3px black solid;
+  justify-content: space-between;
   padding: 25px;
   margin: 10px;
 }
