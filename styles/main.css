@@ -1,3 +1,41 @@
+@import "header.css";
+@import "footer.css";
+
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Thought this would even out my containers but it doesn't */
+/* main {
+  display: flex;
+  flex-direction: column;
+  border: 3px black solid;
+  padding: 25px;
+} */
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  border: 3px red solid;
+  padding: 25px;
+}
+
+.containerTop {
+  border: 3px black solid;
+  padding: 25px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.containerMiddle {
+  border: 3px black solid;
+  padding: 25px;
+  margin: 10px;
+}
+
+.containerBottom {
+  border: 3px black solid;
+  padding: 25px;
+  margin: 10px;
 }
