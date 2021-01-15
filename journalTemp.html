@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Imbue">
     <title>Daily Journal</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 
 <body>
@@ -15,12 +15,12 @@
     <main>
 
         <header>
-            <div class=headerTitle>DAILY JOURNAL</div>
+            <h2><div class=headerTitle>DAILY JOURNAL</div></h2>
         </header>
 
         <section class="contentContainer">
 
-            <div class=containerTop>
+        <div class=containerTop>
 
                 <form class=journalForm action="">
 
@@ -30,7 +30,7 @@
                     <input type="text" class=journalFields__title id=journalTitle>
 
                     <label for="journalMood">Mood</label>
-                    <select id="journalMood">
+                    <select name="journalMood" id="journalMood">
                         <option value="1">Meh</option>
                         <option value="2">Empty</option>
                         <option value="3">Terrified</option>
@@ -50,20 +50,24 @@
 
             </form>
 
-            </div>
+        </div>
 
-            <div class=containerBottom id=entryLog>
-                <!-- display journal entries here  -->
-            </div>
+        <!-- <div class=containerMiddle></div> -->
+        
 
-        </section>
+        <div class=containerBottom id=entryLog>
+            <!-- LIST OF JOURNAL ENTRIES -->
+        </div>
 
-        <footer>
+    </section>
+
+    <footer>
             <div class=footerName>Blu Sanders</div>
             <div class=footerGit><a href="https://github.com/blusanders">MY GITHUB</a></div>
             <div class=footerCopyright>(c) 2021</div>
         </footer>
 
+ 
     </main>
     
     <script type="module" src="./scripts/main.js"></script>

@@ -1,14 +1,22 @@
-@import "header.css";
-@import "footer.css";
+/* @import "header.css";
+@import "footer.css"; */
 
 * {
-  /* border: lightgreen 1px solid;
+ /* border: lightgreen 1px solid; */
   font-family: Geneva, Tahoma, sans-serif; */
 }
 
 body {
   font: normal 18px/1.5 "Fira Sans", "Helvetica Neue", sans-serif;
   /* padding: 50px 0;} */
+}
+
+header {
+  display: flex;
+  padding: 10px;
+  /* margin: 10px; */
+  background-color: darkgray; 
+  color: white;
 }
 
 /* entire page */
@@ -29,10 +37,11 @@ hr.fancyHR {
 
 /* container for all content  */
 .contentContainer {
+  padding: 10px;
 }
 
 .containerTop {
-  /* padding: 25px; */
+  padding: 10px;
   /* margin: 10px; */
 }
 
@@ -48,18 +57,35 @@ hr.fancyHR {
 .containerBottom {
   /* padding: 25px;
   margin: 10px; */
+  background-color: darkgray;
+
 }
 
 .journalFields__title {
   max-width: 400px;
+  font-style: italic;
+  font-weight: bolder;
 }
 
 #journalMood {
   width: 150px;
 }
 
+.journalEntry {
+  font-size: 15px;
+  background-color: lightgray;
+  align-self: flex-end;
+  text-align: center;
+  /* width: 600px; */
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  /* transition: 0.3s; */
+  /* border-radius: 5px; */
+}
+
+.displayJournalEntry{
+}
+
 .journalFields__entry {
-  max-width: 400px;
 }
 
 .journalFields__button {
@@ -68,4 +94,13 @@ hr.fancyHR {
   background: gray;
   color: white;
   border: 0;
+  margin-top: 5px;
+}
+
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  /* margin: 10px; */
 }
