@@ -2,53 +2,52 @@
 @import "footer.css"; */
 
 * {
- /* border: lightgreen 1px solid; */
-  font-family: Geneva, Tahoma, sans-serif; */
+ /* border: black 1px solid; */
 }
 
 body {
-  /* font: normal 18px/1.5 "Fira Sans", "Helvetica Neue", sans-serif; */
-  /* padding: 50px 0;} */
+  font-family: Geneva, Tahoma, sans-serif; */
 }
 
 header {
-  display: flex;
-  padding: 10px;
-  /* margin: 10px; */
   background-color: darkgray; 
   color: white;
+  height: 100px;
+  /* these 4 lines centered headed div text
+  but seems like a lot of code for a simple thing */
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* entire page */
 main {
   background-color: #f0f0f0;
+  padding:10px;
 }
-
-hr.fancyHR {
-  border: 0;
-  height: 1px;
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.75),
-    rgba(0, 0, 0, 0)
-  );
-}
-
+ 
 /* container for all content  */
 .contentContainer {
-  padding: 10px;
 }
 
+/* form  */
 .containerTop {
+}
+
+/* journal list  */
+.containerBottom {
+  background-color: lightgray;
   padding: 10px;
-  /* margin: 10px; */
 }
 
 .journalForm {
   display: flex;
   flex-direction: column;
   width:50%;
+  border:0;
+  padding: 10px;
+  /* flex: 1 1 100%; */
 }
 
 #journalFields__button  {
@@ -61,15 +60,8 @@ hr.fancyHR {
   /* border-radius: 5px; */
 }
 
-.containerBottom {
-background-color: lightgray;
-padding:10px;
-}
-
 .displayJournalEntry {
-  text-align: center;
-  padding:0;
-  margin:20;
+  /* text-align: center; */
 }
 
 .displayJournalEntry__p{
@@ -89,12 +81,24 @@ padding:10px;
 }
 
 .displayJournalEntry__entry{
-  text-align: left;
+  /* text-align: left; */
 }
 
 footer {
   display: flex;
   justify-content: space-between;
-  padding: 15px;
-  /* margin: 10px; */
+  padding: 10px;
+  /* border: lightgreen 1px solid; */
+}
+
+/* not used  */
+hr.fancyHR {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
 }
