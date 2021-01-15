@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Imbue">
     <title>Daily Journal</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
 </head>
 
 <body>
@@ -15,58 +14,57 @@
     <main>
 
         <header>
-            <div class=headerTitle>DAILY JOURNAL</div>
+            <h2><div class=headerTitle>DAILY JOURNAL</div></h2>
         </header>
 
         <section class="contentContainer">
 
-            <div class=containerTop>
+        <div class=containerTop>
 
-                <form class=journalForm action="">
+            <form class=journalForm action="">
 
                     <!-- <fieldset class=journalFieldset> -->
                     
                     <label for="journalTitle">Title</label>
-                    <input type="text" class=journalFields__title id=journalTitle>
+                    <input type="text" id=journalFields__title>
 
                     <label for="journalMood">Mood</label>
-                    <select id="journalMood">
+                    <select name="journalMood" id="journalFields__mood">
                         <option value="1">Meh</option>
                         <option value="2">Empty</option>
                         <option value="3">Terrified</option>
                         <option value="4">Dread</option>
-                    </select>
+                      </select>
 
                     <label for="journalDate">Date of Entry</label>
-                    <input type="date" class="journalFields__date" name="journalDate" id="journalDate">
+                    <input type="date" name="journalDate" id="journalFields__date">
 
                     <label for="journalEntry">Journal Entry</label>
-                    <textarea rows="4" cols="50" class="journalFields__entry" name="journalEntry" id="journalEntry">
+                    <textarea rows="4" cols="50" id="journalFields__entry" name="journalEntry">
                     </textarea>
 
-                    <input type="button" class="journalFields__button" value="Record Journal Entry">
+                    <input type="button" id="journalFields__button" value="Record Journal Entry">
 
                 <!-- </fieldset> -->
 
             </form>
 
-            </div>
+        </div>
 
-            <div class=containerBottom id=entryLog>
-                <!-- display journal entries here  -->
-            </div>
+        <div class=containerBottom id=entryLog>
+            <!-- LIST OF JOURNAL ENTRIES -->
+        </div>
 
-        </section>
+    </section>
 
-        <footer>
+    <footer>
             <div class=footerName>Blu Sanders</div>
             <div class=footerGit><a href="https://github.com/blusanders">MY GITHUB</a></div>
             <div class=footerCopyright>(c) 2021</div>
         </footer>
 
+ 
     </main>
-    
     <script type="module" src="./scripts/main.js"></script>
-
-    </body>
+</body>
 </html>

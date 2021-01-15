@@ -50,28 +50,45 @@ hr.fancyHR {
   flex-direction: column;
 }
 
-/* removed field set bc didn't like the box */
-/* fieldset {
-} */
+#journalFields__title {
+  width: 300px;
+}
+
+#journalFields__mood {
+  width: 300px;
+}
+
+#journalFields__date {
+  width: 300px;
+}
+
+#journalFields__entry {
+  width: 400px;
+}
+
+
+#journalFields__button {
+  width: 200px;
+  text-align: center;
+  background: gray;
+  color: white;
+  border: 0;
+  margin-top: 5px;
+  /* border-radius: 5px; */
+}
+
+#journalMood {
+  /* width: 150px; */
+}
 
 .containerBottom {
   /* padding: 25px;
   margin: 10px; */
-  background-color: darkgray;
+  /* background-color: red; */
 
 }
 
-.journalFields__title {
-  max-width: 400px;
-  font-style: italic;
-  font-weight: bolder;
-}
-
-#journalMood {
-  width: 150px;
-}
-
-.journalEntry {
+.displayJournalEntry {
   font-size: 15px;
   background-color: lightgray;
   align-self: flex-end;
@@ -82,21 +99,9 @@ hr.fancyHR {
   /* border-radius: 5px; */
 }
 
-.displayJournalEntry{
-}
+.displayJournalEntry__entry{
 
-.journalFields__entry {
 }
-
-.journalFields__button {
-  width: 200px;
-  text-align: center;
-  background: gray;
-  color: white;
-  border: 0;
-  margin-top: 5px;
-}
-
 
 footer {
   display: flex;
