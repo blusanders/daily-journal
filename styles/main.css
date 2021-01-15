@@ -66,9 +66,13 @@ hr.fancyHR {
   width: 400px;
 }
 
+.entryBreak{
+  margin: 0;
+  padding: 0;
+}
 
-#journalFields__button {
-  width: 200px;
+#journalFields__button  {
+  width: 170px;
   text-align: center;
   background: gray;
   color: white;
