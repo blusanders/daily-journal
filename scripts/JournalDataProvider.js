@@ -14,7 +14,7 @@ const journal = [
         concept: "l'infini",
         entry: "Look up and let us meet among the stars and light up the heavens as we chase each other like comets of twisted fire blazing by astronauts and lost satellites. Past our past as we race history into darkness. Au revoir young planet. Avancer dans l'infini.",
         mood: "meh"
-    }
+    },
 
     {
         id: 2,
@@ -22,7 +22,7 @@ const journal = [
         concept: "london on a tuesday night",
         entry: "Walk with me in the gray Kiss me in the mist Laugh at all the funny cars Watch the sky kidnap the stars With a hat and a shawl We don't need anyone at all Wrapped up until the foggy light London on a Tuesday night",
         mood: "terrified"
-    }
+    },
 
     {
         id: 3,
@@ -30,7 +30,7 @@ const journal = [
         concept: "untitled",
         entry: "you are poetry i inted to write",
         mood: "dred"
-    }
+    },
 
     {
         id: 4,
@@ -49,7 +49,7 @@ const journal = [
 export const useJournalEntries = () => {
     const sortedByDate = journal.sort(
         (currentEntry, nextEntry) =>
-            Date.parse(currentEntry.date) - Date.parse(nextEntry.date)
+            Date.parse(nextEntry.date) - Date.parse(currentEntry.date)
     )
     return sortedByDate
 }
