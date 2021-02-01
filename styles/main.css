@@ -50,7 +50,7 @@ main {
   /* flex: 1 1 100%; */
 }
 
-#journalFields__button  {
+.journalButton  {
   width: 170px;
   text-align: center;
   background: gray;
@@ -58,6 +58,11 @@ main {
   border: 0;
   margin-top: 5px;
   /* border-radius: 5px; */
+}
+
+.validation{
+  color: red;
+  font-size: 11px;
 }
 
 .displayJournalEntry {
