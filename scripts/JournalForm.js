@@ -26,12 +26,13 @@ const renderJournalEntryForm = () => {
     <label for="journalEntry">Journal Entry</label>
     <textarea rows="4" cols="50" id="journalEntry"></textarea>
 
-    <input type="button" class="journalButton" id=journalButton value="Record Journal Entry">`
+    <input type="button" class="journalButton" id=journalButtonAdd value="Record Journal Entry">`
 }
 
 eventHub.addEventListener("click", clickEvent => {
-        if (clickEvent.target.id === "journalButton") {
-            // debugger
+    console.log("click");
+        if (clickEvent.target.id === "journalButtonAdd") {
+
             const newEntry = {
                 concept: document.getElementById("journalTitle").value,
                 mood: document.getElementById("journalMood").value,
@@ -39,10 +40,11 @@ eventHub.addEventListener("click", clickEvent => {
                 entry: document.getElementById("journalEntry").value,
             }
     
-            // Change API state and application state
-// debugger
             saveEntry(newEntry);
-            // alert("Save Entry");
+            document.getElementById("journalTitle").value=""
+            document.getElementById("journalMood").value=""
+            document.getElementById("journalDate").value=""
+            document.getElementById("journalEntry").value=""
         }
     })
 

@@ -17,6 +17,9 @@ export const getEntries = () => {
         .then(parsedEntries => {
             entries = parsedEntries
         })
+}
+
+export const clearEntries = () =>{
 
 }
 
@@ -30,6 +33,7 @@ export const saveEntry = entry => {
         body: JSON.stringify(entry)
     })
     .then(JournalEntryList)
+    // .then(clearEntries)
     .then(dispatchStateChangeEvent)
 }
 

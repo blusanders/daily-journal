@@ -5,9 +5,22 @@ const contentElement = document.querySelector("#entryLog")
 const eventHub = document.querySelector(".container")
 
 eventHub.addEventListener("entryStateChangedEvent", clickEvent => {
-    EntryList();
+    //if journal entry list has changed then rerender it
+    JournalEntryList();
 })
 
+eventHub.addEventListener("click", clickEvent => {
+    // debugger
+    if (clickEvent.target.id === "journalButtonDelete") {
+        alert("DELETE")
+    }
+
+    if (clickEvent.target.id === "journalButtonEdit") {
+        alert("EDIT")
+    }
+})
+
+//fetches entry, uses a slice of the entry array, renders to DOM
 export const JournalEntryList = () => {
     getEntries()
     .then(() => {
@@ -16,16 +29,15 @@ export const JournalEntryList = () => {
     })
 }
 
+//renders entry list to DOM 
 const render = entryArray => {
 
     let htmlRep = ""
-    // htmlRep += "<div class=criminalContainer>"
 
     entryArray.forEach(entryOjb => {
         htmlRep += JournalEntryComponent(entryOjb);
     });
 
-    // htmlRep+="</div>"
-    // debugger
     contentElement.innerHTML = htmlRep;
 }
+
