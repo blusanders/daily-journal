@@ -60,6 +60,11 @@ main {
   /* border-radius: 5px; */
 }
 
+.validation{
+  color: red;
+  font-size: 11px;
+}
+
 .displayJournalEntry {
   /* text-align: center; */
 }

@@ -4,13 +4,23 @@ const eventHub = document.querySelector(".container")
 
 export const JournalForm = () => {
     renderJournalEntryForm()
+    const dateVar = getFormattedDate(new Date());
+    document.getElementById('journalDate').value = dateVar
+}
+
+//get formatted today's date for default form value
+function getFormattedDate(date) {
+    let year = date.getFullYear();
+    let month = (1 + date.getMonth()).toString().padStart(2, '0');
+    let day = date.getDate().toString().padStart(2, '0');
+    return year + '-' + month + '-' + day;
 }
 
 const renderJournalEntryForm = () => {
     contentTarget.innerHTML =
 
     `<label for="journalTitle">Title</label>
-    <input type="text" id=journalTitle>
+    <input type="text" id=journalTitle><div class="validation journalFormValidation__title"></div>
 
     <label for="journalMood">Mood</label>
     <select id="journalMood">
@@ -30,11 +40,14 @@ const renderJournalEntryForm = () => {
 }
 
 eventHub.addEventListener("click", clickEvent => {
+    const journalFormValidation__title = document.querySelector(".journalFormValidation__title")
+
     console.log("click");
         if (clickEvent.target.id === "journalButtonAdd") {
 
             if (document.getElementById("journalTitle").value===""){
-                return alert("Title is required.")
+                journalFormValidation__title.innerHTML = "Title is required."
+                return false
             }
 
             const newEntry = {
@@ -45,10 +58,8 @@ eventHub.addEventListener("click", clickEvent => {
             }
     
             saveEntry(newEntry);
-            document.getElementById("journalTitle").value=""
-            document.getElementById("journalMood").value=""
-            document.getElementById("journalDate").value=""
-            document.getElementById("journalEntry").value=""
+            //rerender form for blank values and detaul date
+            JournalForm();
         }
     })
 
