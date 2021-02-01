@@ -33,6 +33,10 @@ eventHub.addEventListener("click", clickEvent => {
     console.log("click");
         if (clickEvent.target.id === "journalButtonAdd") {
 
+            if (document.getElementById("journalTitle").value===""){
+                return alert("Title is required.")
+            }
+
             const newEntry = {
                 concept: document.getElementById("journalTitle").value,
                 mood: document.getElementById("journalMood").value,
