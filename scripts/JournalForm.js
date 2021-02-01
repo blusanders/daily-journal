@@ -58,7 +58,7 @@ eventHub.addEventListener("click", clickEvent => {
             }
     
             saveEntry(newEntry);
-            //rerender form for blank values and detaul date
+            //rerender form for blank values and default date
             JournalForm();
         }
     })
