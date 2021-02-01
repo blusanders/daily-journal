@@ -5,238 +5,47 @@
       "date": "1/1/2021",
       "concept": "l'infini",
       "entry": "Look up and let us meet among the stars and light up the heavens as we chase each other like comets of twisted fire blazing by astronauts and lost satellites. Past our past as we race history into darkness. Au revoir young planet. Avancer dans l'infini.",
-      "mood": "Meh"
+      "moodId": 2
     },
     {
       "id": 2,
       "date": "1/1/2016",
       "concept": "london on a tuesday night",
       "entry": "Walk with me in the gray Kiss me in the mist Laugh at all the funny cars Watch the sky kidnap the stars With a hat and a shawl We don't need anyone at all Wrapped up until the foggy light London on a Tuesday night",
-      "mood": "Terrified"
+      "moodId": 2
     },
     {
       "id": 3,
       "date": "1/1/2020",
       "concept": "untitled",
       "entry": "you are poetry i inted to write",
-      "mood": "Dred"
+      "moodId": 1
     },
     {
       "id": 4,
       "date": "1/1/2019",
       "concept": "methylene blue",
       "entry": "when you kissed me there must have been poison in your tooth a hidden weapon a colorless hue how else to make sense of loss of breath vertigo time is no antidote i’ll need methylene blue to get over you",
-      "mood": "Empty"
+      "moodId": 4
+    }
+  ],
+
+  "mood":[
+    {
+      "id":1,
+      "label":"Meh"
     },
     {
-      "concept": "Tester Title",
-      "mood": "Empty",
-      "date": "2021-03-01",
-      "entry": "I am an entry.",
-      "id": 5
+      "id":2,
+      "label":"Empty"
     },
     {
-      "concept": "Tester Title",
-      "mood": "Terrified",
-      "date": "2021-03-01",
-      "entry": "I am an entry.",
-      "id": 6
+      "id":3,
+      "label":"Terrified"
     },
     {
-      "concept": "",
-      "mood": "Meh",
-      "date": "",
-      "entry": "",
-      "id": 7
-    },
-    {
-      "concept": "",
-      "mood": "Meh",
-      "date": "",
-      "entry": "",
-      "id": 8
-    },
-    {
-      "concept": "12345",
-      "mood": "Empty",
-      "date": "2021-02-17",
-      "entry": "I am a big test.",
-      "id": 9
-    },
-    {
-      "concept": "Hello",
-      "mood": "Dread",
-      "date": "2021-02-25",
-      "entry": "Hi Test.",
-      "id": 10
-    },
-    {
-      "concept": "",
-      "mood": "Meh",
-      "date": "",
-      "entry": "1233",
-      "id": 11
-    },
-    {
-      "concept": "",
-      "mood": "Meh",
-      "date": "",
-      "entry": "",
-      "id": 12
-    },
-    {
-      "concept": "1234567",
-      "mood": "",
-      "date": "",
-      "entry": "",
-      "id": 13
-    },
-    {
-      "concept": "",
-      "mood": "Meh",
-      "date": "",
-      "entry": "",
-      "id": 14
-    },
-    {
-      "concept": "",
-      "mood": "Meh",
-      "date": "",
-      "entry": "",
-      "id": 15
-    },
-    {
-      "concept": "",
-      "mood": "Meh",
-      "date": "",
-      "entry": "",
-      "id": 16
-    },
-    {
-      "concept": "",
-      "mood": "Meh",
-      "date": "",
-      "entry": "",
-      "id": 17
-    },
-    {
-      "concept": "",
-      "mood": "",
-      "date": "2021-02-28",
-      "entry": "",
-      "id": 18
-    },
-    {
-      "concept": "11111",
-      "mood": "Meh",
-      "date": "",
-      "entry": "",
-      "id": 19
-    },
-    {
-      "concept": "",
-      "mood": "Meh",
-      "date": "",
-      "entry": "",
-      "id": 20
-    },
-    {
-      "concept": "",
-      "mood": "Meh",
-      "date": "",
-      "entry": "",
-      "id": 21
-    },
-    {
-      "concept": "",
-      "mood": "",
-      "date": "",
-      "entry": "",
-      "id": 22
-    },
-    {
-      "concept": "",
-      "mood": "Meh",
-      "date": "",
-      "entry": "",
-      "id": 23
-    },
-    {
-      "concept": "",
-      "mood": "Meh",
-      "date": "",
-      "entry": "",
-      "id": 24
-    },
-    {
-      "concept": "",
-      "mood": "",
-      "date": "",
-      "entry": "",
-      "id": 25
-    },
-    {
-      "concept": "666",
-      "mood": "",
-      "date": "",
-      "entry": "",
-      "id": 26
-    },
-    {
-      "concept": "",
-      "mood": "Meh",
-      "date": "",
-      "entry": "",
-      "id": 27
-    },
-    {
-      "concept": "",
-      "mood": "Meh",
-      "date": "",
-      "entry": "",
-      "id": 28
-    },
-    {
-      "concept": "",
-      "mood": "",
-      "date": "",
-      "entry": "777",
-      "id": 29
-    },
-    {
-      "concept": "1111",
-      "mood": "Meh",
-      "date": "",
-      "entry": "8888",
-      "id": 30
-    },
-    {
-      "concept": "Tester 123",
-      "mood": "Meh",
-      "date": "2021-02-01",
-      "entry": "",
-      "id": 31
-    },
-    {
-      "concept": "112233",
-      "mood": "Meh",
-      "date": "2021-02-01",
-      "entry": "",
-      "id": 32
-    },
-    {
-      "concept": "221133",
-      "mood": "Meh",
-      "date": "2021-02-01",
-      "entry": "",
-      "id": 33
-    },
-    {
-      "concept": "552773",
-      "mood": "Meh",
-      "date": "2021-02-01",
-      "entry": "",
-      "id": 34
+      "id":4,
+      "label":"Dread"
     }
   ]
 }
