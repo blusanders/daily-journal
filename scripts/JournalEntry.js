@@ -10,8 +10,8 @@ export const JournalEntryComponent = (entry) => {
         <p class="displayJournalEntry__mood displayJournalEntry__p">${entry.mood}</p>
         <p class="displayJournalEntry__entry ">${entry.entry}</p>
         <p>
-        <input type="button" id="journalFields__button" value="Edit">
-        <input type="button" id="journalFields__button" value="Delete">
+        <input type="button" class="journalButton" value="Edit">
+        <input type="button" class="journalButton" value="Delete">
         </p>
         <hr>
       </div>
