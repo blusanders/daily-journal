@@ -38,7 +38,7 @@ const renderJournalEntryForm = () => {
     <label for="journalEntry">Journal Entry</label>
     <textarea rows="4" cols="50" id="journalEntry"></textarea>
 
-    <input type="button" class="journalButton" id=journalButtonAdd value="Record Journal Entry">`
+    <input type="button" class="journalButton" id=journalButtonAdd value="ADD">`
 }
 
 eventHub.addEventListener("click", clickEvent => {
