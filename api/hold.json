@@ -1,0 +1,92 @@
+{
+    "entries": [
+      {
+        "id": 1,
+        "date": "1/1/2021",
+        "concept": "l'infini",
+        "entry": "Look up and let us meet among the stars and light up the heavens as we chase each other like comets of twisted fire blazing by astronauts and lost satellites. Past our past as we race history into darkness. Au revoir young planet. Avancer dans l'infini.",
+        "moodId": 2
+      },
+      {
+        "id": 2,
+        "date": "1/1/2016",
+        "concept": "london on a tuesday night",
+        "entry": "Walk with me in the gray Kiss me in the mist Laugh at all the funny cars Watch the sky kidnap the stars With a hat and a shawl We don't need anyone at all Wrapped up until the foggy light London on a Tuesday night",
+        "moodId": 2
+      },
+      {
+        "id": 3,
+        "date": "1/1/2020",
+        "concept": "untitled",
+        "entry": "you are poetry i inted to write",
+        "moodId": 1
+      },
+      {
+        "id": 4,
+        "date": "1/1/2019",
+        "concept": "methylene blue",
+        "entry": "when you kissed me there must have been poison in your tooth a hidden weapon a colorless hue how else to make sense of loss of breath vertigo time is no antidote i’ll need methylene blue to get over you",
+        "moodId": 4
+      },
+      {
+        "concept": "waves",
+        "moodId": 3,
+        "date": "2021-02-15",
+        "entry": "this year was made of waves\nsome felt with our feet\nsome fought with our hearts\nsome broke before the shore\nsome nearly broke us apart\nsome we dove under\nsome we rode over\nsome sang us to sleep\nsome woke us from slumber\nthis year was made of waves\none after another\nthis year was made of waves\nlike we make each other",
+        "id": 5
+      },
+      {
+        "concept": "untitled",
+        "mood": "Terrified",
+        "date": "2021-02-15",
+        "entry": "does it end\nI wondered as I looked up\nas if I met the sky where it was sewn to the ground\noh but it never ends\nit needn’t reply\nfor I already knew the answer",
+        "id": 6
+      },
+      {
+        "concept": "luces",
+        "mood": "Dread",
+        "date": "2021-02-15",
+        "entry": "las luces de la ciudad son las pecas de la noche\n\n",
+        "id": 7
+      },
+      {
+        "concept": "a lost ghost",
+        "mood": "Meh",
+        "date": "2021-02-15",
+        "entry": "the thing about ghosts is\nby design they’re lost\nI haunted myself I decided\nor not really\nbut what else do you tell yourself\nwhen you’re no better than a sheet with holes\nI was always shackled I guess\nwaiting in the dark for someone to love",
+        "id": 8
+      },
+      {
+        "concept": "123",
+        "mood": "Empty",
+        "date": "2021-02-15",
+        "entry": "456",
+        "id": 9
+      },
+      {
+        "concept": "zzz",
+        "mood": "Meh",
+        "date": "2021-02-15",
+        "entry": "zzz",
+        "id": 10
+      }
+    ],
+    "moods": [
+      {
+        "id": 1,
+        "label": "Meh"
+      },
+      {
+        "id": 2,
+        "label": "Empty"
+      },
+      {
+        "id": 3,
+        "label": "Terrified"
+      },
+      {
+        "id": 4,
+        "label": "Dread"
+      }
+    ]
+  }

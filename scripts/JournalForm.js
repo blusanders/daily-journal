@@ -24,11 +24,13 @@ const renderJournalEntryForm = () => {
 
     <label for="journalMood">Mood</label>
     <select id="journalMood">
-        <option value="Meh">Meh</option>
-        <option value="Empty">Empty</option>
-        <option value="Terrified">Terrified</option>
-        <option value="Dread">Dread</option>
-    </select>
+        <option value=0>How are you feeling?</option>
+        <option value=1>Meh</option>
+        <option value=2>Empty</option>
+        <option value=3>Terrified</option>
+        <option value=4>Dread</option>
+    </select><div class="validation journalFormValidation__mood"></div>
+
 
     <label for="journalDate">Date of Entry</label>
     <input type="date" id="journalDate">
@@ -41,6 +43,7 @@ const renderJournalEntryForm = () => {
 
 eventHub.addEventListener("click", clickEvent => {
     const journalFormValidation__title = document.querySelector(".journalFormValidation__title")
+    const journalFormValidation__mood = document.querySelector(".journalFormValidation__mood")
 
     console.log("click");
         if (clickEvent.target.id === "journalButtonAdd") {
@@ -48,11 +51,20 @@ eventHub.addEventListener("click", clickEvent => {
             if (document.getElementById("journalTitle").value===""){
                 journalFormValidation__title.innerHTML = "Title is required."
                 return false
+            }else{
+                journalFormValidation__title.innerHTML = ""
+            }
+
+            if (parseInt(document.getElementById("journalMood").value)===0){
+                journalFormValidation__mood.innerHTML = "Mood is required."
+                return false
+            }else{
+                journalFormValidation__mood.innerHTML = ""
             }
 
             const newEntry = {
                 concept: document.getElementById("journalTitle").value,
-                mood: document.getElementById("journalMood").value,
+                moodId: parseInt(document.getElementById("journalMood").value),
                 date: document.getElementById("journalDate").value,
                 entry: document.getElementById("journalEntry").value,
             }

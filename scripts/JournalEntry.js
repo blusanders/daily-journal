@@ -3,15 +3,16 @@
  *           HTML representation of the data
  */
 export const JournalEntryComponent = (entry) => {
-    return `
+  // debugger
+  return `
       <div class="displayJournalEntry">
         <p class="displayJournalEntry__concept displayJournalEntry__p">${entry.concept}</p>
         <p class="displayJournalEntry__date displayJournalEntry__p">${entry.date}</p>
-        <p class="displayJournalEntry__mood displayJournalEntry__p">${entry.mood}</p>
+        <p class="displayJournalEntry__mood displayJournalEntry__p">${entry.mood.label}</p>
         <p class="displayJournalEntry__entry ">${entry.entry}</p>
         <p>
         <input type="button" class="journalButton" id="journalButtonEdit" value="Edit">
-        <input type="button" class="journalButton" id="journalButtonDelete" value="Delete">
+        <input type="button" class="journalButton" id="journalButtonDelete--${entry.id}" value="Delete">
         </p>
         <hr>
       </div>

@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: Geneva, Tahoma, sans-serif; */
+  font-family: Geneva, Tahoma, sans-serif;
 }
 
 header {
@@ -19,6 +19,11 @@ header {
   text-align: center;
   flex-direction: column;
   justify-content: center;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.headerTitle{
+  font-size: 3rem;
 }
 
 /* entire page */
