@@ -1,3 +1,4 @@
+import { JournalEntryList } from "../JournalEntryList.js"
 import { MoodFilter } from "./MoodFilter.js"
 import { getMoods, useMoods } from "./MoodProvider.js"
 
@@ -21,8 +22,10 @@ export const MoodList = () => {
 
 
 eventHub.addEventListener("change", e => {
+    // debugger
     if (e.target.name === "moodFilter") {
-        alert("MOOD CHANGE")
+        // debugger
+        JournalEntryList(parseInt(e.target.value))
     }
 })
 

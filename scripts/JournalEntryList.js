@@ -26,8 +26,8 @@ eventHub.addEventListener("click", clickEvent => {
 })
 
 //fetches entry, uses a slice of the entry array, renders to DOM
-export const JournalEntryList = () => {
-    getEntries()
+export const JournalEntryList = (moodID) => {
+    getEntries(moodID)
     .then(() => {
         const entryArray = useEntries()
         render(entryArray)

@@ -3,4 +3,4 @@ import { JournalForm } from "./JournalForm.js";
 import { MoodList } from "./filter/FilterBar.js";
 JournalForm();
 MoodList();
-JournalEntryList();
+JournalEntryList(0);

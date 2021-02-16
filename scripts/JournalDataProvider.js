@@ -12,13 +12,22 @@ export const useEntries = () => {
     return sortedByDate
 }
 
-export const getEntries = () => {
-    let fetchURL = "http://localhost:8088/entries?_expand=mood"
+export const getEntries = (moodId) => {
+// debugger
+    let fetchURL=""
+    if(moodId===0){
+        fetchURL= "http://localhost:8088/entries?_expand=mood"
+    }else{
+        fetchURL= "http://localhost:8088/entries?_expand=mood&moodId="+moodId
+    }   
+
     return fetch(fetchURL)
         .then(response => response.json())
         .then(parsedEntries => {
+            // debugger
             entries = parsedEntries
-        })
+    })
+
 }
 
 export const clearEntries = () =>{

@@ -45,7 +45,7 @@ eventHub.addEventListener("click", clickEvent => {
     const journalFormValidation__title = document.querySelector(".journalFormValidation__title")
     const journalFormValidation__mood = document.querySelector(".journalFormValidation__mood")
 
-    console.log("click");
+    // console.log("click");
         if (clickEvent.target.id === "journalButtonAdd") {
 
             if (document.getElementById("journalTitle").value===""){
@@ -71,6 +71,7 @@ eventHub.addEventListener("click", clickEvent => {
     
             saveEntry(newEntry);
             //rerender form for blank values and default date
+            //this maybe be wrong? set target values?
             JournalForm();
         }
     })
