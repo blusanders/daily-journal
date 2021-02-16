@@ -1,7 +1,3 @@
-/*
- *  Purpose: To render a single journal entry as an
- *           HTML representation of the data
- */
 export const JournalEntryComponent = (entry) => {
   // debugger
   return `
@@ -18,4 +14,4 @@ export const JournalEntryComponent = (entry) => {
         <hr>
       </div>
     `
-} 
+}

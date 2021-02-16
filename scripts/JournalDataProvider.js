@@ -2,6 +2,7 @@ import { JournalEntryList } from "./JournalEntryList.js";
 const eventHub = document.querySelector(".container")
 
 let entries = [];
+let entrytags = [];
 
 //return slice ordered by newest entry first
 export const useEntries = () => {
@@ -44,27 +45,19 @@ export const saveEntry = entry => {
         },
         body: JSON.stringify(entry)
     })
-    .then(JournalEntryList)
-    // .then(clearEntries)
-    .then(dispatchStateChangeEvent("entrySaved"))
+    // .then(getEntries())
+    .then(dispatchStateChangeEvent())
 }
 
 export const deleteEntry = entryID => {
-    // debugger
     return fetch('http://localhost:8088/entries/'+entryID, {
         method: "DELETE"
     })
-    .then(JournalEntryList)
-    .then(dispatchStateChangeEvent("entryDeleted"))
+    // .then(getEntries())
+    .then(dispatchStateChangeEvent())
 }
 
 const dispatchStateChangeEvent = (eventType) => {
-    // debugger
-    const entryStateChangedEvent = new CustomEvent("entryStateChangedEvent", {
-        detail: {
-            entryStateEvent: eventType
-        }  
-    })
-
+    const entryStateChangedEvent = new CustomEvent("entryStateChangedEvent")
     eventHub.dispatchEvent(entryStateChangedEvent)
 }

@@ -74,5 +74,41 @@
       "id": 4,
       "label": "Dread"
     }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "subject": "love"
+    },
+    {
+      "id": 2,
+      "subject": "heartbreak"
+    },
+    {
+      "id": 3,
+      "subject": "existential crisis"
+    }
+  ],
+  "entrytags": [
+    {
+      "id": 1,
+      "entryId": 4,
+      "tagId": 2
+    },
+    {
+      "id": 2,
+      "entryId": 4,
+      "tagId": 3
+    },
+    {
+      "id": 2,
+      "entryId": 8,
+      "tagId": 1
+    },
+    {
+      "id": 2,
+      "entryId": 8,
+      "tagId": 2
+    }
   ]
 }

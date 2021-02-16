@@ -6,7 +6,7 @@ const eventHub = document.querySelector(".container")
 
 eventHub.addEventListener("entryStateChangedEvent", clickEvent => {
     //if journal entry list has changed then rerender it
-    JournalEntryList();
+    JournalEntryList(0);
 })
 
 eventHub.addEventListener("click", clickEvent => {
@@ -25,7 +25,7 @@ eventHub.addEventListener("click", clickEvent => {
 
 })
 
-//fetches entry, uses a slice of the entry array, renders to DOM
+//fetches entries by mood filter and uses a slice of array. then renders to DOM.
 export const JournalEntryList = (moodID) => {
     getEntries(moodID)
     .then(() => {
@@ -42,7 +42,7 @@ const render = entryArray => {
     entryArray.forEach(entryOjb => {
         htmlRep += JournalEntryComponent(entryOjb);
     });
-
+// debugger
     contentElement.innerHTML = htmlRep;
 }
 

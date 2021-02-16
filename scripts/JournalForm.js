@@ -38,6 +38,9 @@ const renderJournalEntryForm = () => {
     <label for="journalEntry">Journal Entry</label>
     <textarea rows="4" cols="50" id="journalEntry"></textarea>
 
+    <label for="journalEntryTags">Tags</label>
+    <input id="journalEntryTags">
+
     <input type="button" class="journalButton" id=journalButtonAdd value="ADD">`
 }
 
@@ -71,7 +74,7 @@ eventHub.addEventListener("click", clickEvent => {
     
             saveEntry(newEntry);
             //rerender form for blank values and default date
-            //this maybe be wrong? set target values?
+            //this may be be wrong? set target values?
             JournalForm();
         }
     })
