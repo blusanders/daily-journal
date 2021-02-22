@@ -29,4 +29,5 @@ export const saveTag = (tag) => {
         },
         body: JSON.stringify({subject: tag})
     })
+    .then(response => response.json())
 }
