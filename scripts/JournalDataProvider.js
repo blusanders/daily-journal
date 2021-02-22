@@ -1,8 +1,8 @@
 import { JournalEntryList } from "./JournalEntryList.js";
+import { saveEntryTags } from "./tags/EntryTagsProvider.js";
 const eventHub = document.querySelector(".container")
 
 let entries = [];
-let entrytags = [];
 
 //return slice ordered by newest entry first
 export const useEntries = () => {
@@ -19,7 +19,7 @@ export const getEntries = (moodId) => {
     if(moodId===0){
         fetchURL= "http://localhost:8088/entries?_expand=mood"
     }else{
-        fetchURL= "http://localhost:8088/entries?_expand=mood&moodId="+moodId
+        fetchURL= "http://localhost:8088/entries?_expand=mood&moodId=" + moodId
     }   
 
     return fetch(fetchURL)
@@ -31,12 +31,11 @@ export const getEntries = (moodId) => {
 
 }
 
-export const clearEntries = () =>{
+export const saveEntry = (entry, tagArray) => {
 
-}
-
-export const saveEntry = entry => {
-
+    //save entry to entry table
+    //save tags to entryTag table with created ID
+    //send state change event
     let fetchURL = "http://localhost:8088/entries"
     return fetch(fetchURL, {
         method: "POST",
@@ -45,19 +44,26 @@ export const saveEntry = entry => {
         },
         body: JSON.stringify(entry)
     })
-    // .then(getEntries())
-    .then(dispatchStateChangeEvent())
+    .then(res => res.json())
+    .then(createdEntry => {
+        console.log(createdEntry.id)
+        if (tagArray.length > 0){
+            (saveEntryTags(tagArray,createdEntry.id))
+        }
+    })
+    .then(dispatchStateChangeEvent)
 }
 
+
 export const deleteEntry = entryID => {
+// debugger
     return fetch('http://localhost:8088/entries/'+entryID, {
         method: "DELETE"
     })
-    // .then(getEntries())
     .then(dispatchStateChangeEvent())
 }
 
-const dispatchStateChangeEvent = (eventType) => {
+const dispatchStateChangeEvent = () => {
     const entryStateChangedEvent = new CustomEvent("entryStateChangedEvent")
     eventHub.dispatchEvent(entryStateChangedEvent)
 }

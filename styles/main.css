@@ -94,6 +94,11 @@ main {
   /* text-align: left; */
 }
 
+.entryTags{
+  font-style: italic;
+  font-size: 11px;
+}
+
 .filters{
   padding:10px
 }

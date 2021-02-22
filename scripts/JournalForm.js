@@ -38,8 +38,8 @@ const renderJournalEntryForm = () => {
     <label for="journalEntry">Journal Entry</label>
     <textarea rows="4" cols="50" id="journalEntry"></textarea>
 
-    <label for="journalEntryTags">Tags</label>
-    <input id="journalEntryTags">
+    <label for="journalTags">Tags</label>
+    <input id="journalTags">
 
     <input type="button" class="journalButton" id=journalButtonAdd value="ADD">`
 }
@@ -48,34 +48,53 @@ eventHub.addEventListener("click", clickEvent => {
     const journalFormValidation__title = document.querySelector(".journalFormValidation__title")
     const journalFormValidation__mood = document.querySelector(".journalFormValidation__mood")
 
-    // console.log("click");
         if (clickEvent.target.id === "journalButtonAdd") {
 
+            let validVar = false
+
+            //require title
             if (document.getElementById("journalTitle").value===""){
                 journalFormValidation__title.innerHTML = "Title is required."
-                return false
+                console.log("title "+validVar);
+                validVar = false
             }else{
+                //if valid then remove invalid message
+                validVar = true
                 journalFormValidation__title.innerHTML = ""
             }
 
+            //require mood. if title is valid and mood is valid then move on to save
             if (parseInt(document.getElementById("journalMood").value)===0){
                 journalFormValidation__mood.innerHTML = "Mood is required."
-                return false
+                console.log("mood "+validVar);
+                validVar = false
             }else{
                 journalFormValidation__mood.innerHTML = ""
             }
 
+            //build entry object
             const newEntry = {
                 concept: document.getElementById("journalTitle").value,
                 moodId: parseInt(document.getElementById("journalMood").value),
                 date: document.getElementById("journalDate").value,
                 entry: document.getElementById("journalEntry").value,
             }
-    
-            saveEntry(newEntry);
-            //rerender form for blank values and default date
-            //this may be be wrong? set target values?
-            JournalForm();
+
+            if (validVar === true) {
+                console.log("save");
+                //gather tags array
+                let tagArray = []
+                if (document.getElementById("journalTags").value!=""){
+                    tagArray=document.getElementById("journalTags").value.split(",")
+                }
+
+                //save entry w tags array to add in entrytag provider after new Id is generated
+                saveEntry(newEntry,tagArray)
+                
+                //re-render form for blank values and default date
+                //this may be be wrong? set target values?
+                JournalForm();
+            };
         }
     })
 
